@@ -1,0 +1,115 @@
+---
+title: Linear Features QA/QC Workflow
+description: Step-by-step guide for QA/QC of linear features in Digital Surveyor
+---
+
+import {
+  Note,
+  Stepper,
+  StepperItem,
+  Tabs,
+  TabsList,
+  TabsTrigger,
+  TabsContent
+} from '@/components/ui';
+
+# Linear Features QA/QC Workflow
+
+<Note>
+  Follow these steps to verify and correct linear features like road markings, curbs, and utility lines.
+</Note>
+
+<Stepper>
+  <StepperItem title="Step 1: 2D Adjustments">
+    Complete 2D adjustments in Plan View to ensure connectivity and rough spatial precision before any resampling.  
+    <img src="/images/image45.png" alt="Plan view adjustments" />
+  </StepperItem>
+
+  <StepperItem title="Tip: Manual Vertex Adjustments">
+    Grab and drag linear vertices to refine line positions.  
+    <img src="/images/image41.png" alt="Manual vertex adjustments" />
+  </StepperItem>
+
+  <StepperItem title="Tip: Merge Tool">
+    Right-click a line or press “M” to merge split segments of the same feature.  
+    <img src="/images/image36.png" alt="Merge tool example" />
+  </StepperItem>
+
+  <StepperItem title="Tip: Context Menu Options">
+    Right-click on a line (not vertices) for duplicate, resample, or drape-to-ground actions.  
+    <img src="/images/image17.png" alt="Context menu options" />
+  </StepperItem>
+
+  <StepperItem title="Tip: Cross Section Tool">
+    Use the cross section icon to inspect specific areas; view appears on the right.  
+    <img src="/images/image71.png" alt="Cross section tool" />
+  </StepperItem>
+
+  <StepperItem title="Tip: Auto-Join Tool">
+    Use Mass Select > “Merge Lines” to join multiple lines at once. Set deflection angle, gap tolerance, and dedupe threshold.  
+    <img src="/images/image10.png" alt="Auto-join tool" />  
+    <img src="/images/image65.png" alt="Merge lines parameters" />
+  </StepperItem>
+
+  <StepperItem title="Step 2: Resample Centerlines">
+    Filter to show only centerlines and EOP; use Mass Select > “Resample Lines” with your interval/tolerance.  
+    <img src="/images/image62.png" alt="Resample centerlines" />
+  </StepperItem>
+
+  <StepperItem title="Step 3: Resample Curbs">
+    Filter to show only curb lines; Mass Select > “Resample Lines” with desired settings.  
+    <img src="/images/image18.png" alt="Resample curb lines" />
+  </StepperItem>
+
+  <StepperItem title="Step 4: Stencilized Resample">
+    Draw a stencil by clicking to place vertices, press Space to finish, then choose uniform/manual/adaptive intervals.  
+    <img src="/images/image34.png" alt="Stencilized resample tool" />
+  </StepperItem>
+
+  <StepperItem title="Tip: Stencilized Settings">
+    Adjust window width and interval tolerance in the pop-up; hold Shift to snap to existing lines.  
+    <img src="/images/image17.png" alt="Stencilized settings" />  
+    <img src="/images/image33.png" alt="Shift to snap" />
+  </StepperItem>
+
+  <StepperItem title="Step 5: Refine Complex Sections">
+    Create smaller stencilized resamples on curb cuts or rounded corners for higher resolution.  
+    <img src="/images/image44.png" alt="Refine complex sections" />  
+    <img src="/images/image69.png" alt="Trim excess vertices" />
+  </StepperItem>
+
+  <StepperItem title="Step 6: Approve Lines">
+    Once QA/QC is complete, click “Approve” or press “E” to mark lines as finalized.  
+    <img src="/images/image2.png" alt="Approve line" />
+  </StepperItem>
+</Stepper>
+
+## Adding Linear Features
+
+<Stepper>
+  <StepperItem title="Manual Line Addition">
+    Select the Line icon on the top bar and draw features manually.  
+    <img src="/images/image26.png" alt="Manual line addition" />
+  </StepperItem>
+  <StepperItem title="Cross Section Offset">
+    Right-click a line > “Create cross section,” place on point cloud to generate a parallel offset line.  
+    <img src="/images/image28.png" alt="Create cross section" />
+  </StepperItem>
+</Stepper>
+
+<Tabs defaultValue="tips">
+  <TabsList>
+    <TabsTrigger value="tips">Tips</TabsTrigger>
+    <TabsTrigger value="common-issues">Common Issues</TabsTrigger>
+  </TabsList>
+  <TabsContent value="tips">
+    <Note type="tip">
+      - Always start in Plan View for quick XY edits.<br/>
+      - Use keyboard shortcuts (M, E, Shift) to speed up your workflow.<br/>
+      - Document any manual edits for audit trails.
+    </Note>
+  </TabsContent>
+  <TabsContent value="common-issues">
+    {/* e.g. Gaps in connectivity, overlapping vertices, resample failures */}
+  </TabsContent>
+</Tabs>

@@ -1,0 +1,78 @@
+---
+title: Sign Assembly QA/QC Workflow
+description: Step-by-step guide for QA/QC of sign assemblies in Digital Surveyor
+---
+
+import {
+  Stepper,
+  StepperItem,
+  Tabs,
+  TabsList,
+  TabsTrigger,
+  TabsContent,
+  Note
+} from '@/components/ui';
+
+# Sign Assembly QA/QC Workflow
+
+<Note>
+  Follow these steps to review and approve sign assemblies and their components.
+</Note>
+
+<Stepper>
+  <StepperItem title="Step 1: Open Dataset">
+    Select the dataset (click the icon circled in red).  
+    <img src="/images/image58.png" alt="Open dataset icon" />
+  </StepperItem>
+  <StepperItem title="Step 2: Enable Color Coding">
+    Turn on “Color signs based on assemblies” (circled in red).  
+    <img src="/images/image59.png" alt="Color signs based on assemblies" />
+  </StepperItem>
+  <StepperItem title="Step 3: Check Feature Type">
+    Once loaded, click the middle button and ensure “Type” is checked.  
+    <img src="/images/image60.png" alt="Ensure Type is checked" />
+  </StepperItem>
+  <StepperItem title="Step 4: Filter Assemblies">
+    Click the left button to filter sign assemblies first, then signs.  
+    <img src="/images/image61.png" alt="Filter sign assemblies and signs" />
+  </StepperItem>
+  <StepperItem title="Step 5: Fly to Assembly">
+    Click the crosshair icon (“Fly to object”) to locate the first assembly.  
+    <img src="/images/image62.png" alt="Fly to object icon" />
+  </StepperItem>
+  <StepperItem title="Step 6: Lock View">
+    Click the lock icon or press “L” to lock the camera on the assembly.  
+    <img src="/images/image63.png" alt="Lock camera icon" />
+  </StepperItem>
+  <StepperItem title="Step 7: Fill Assembly Attributes">
+    Enter subattribute information (support type, count, condition, comments).  
+    <img src="/images/image64.png" alt="Fill subattribute information" />
+  </StepperItem>
+  <StepperItem title="Step 8: Review Signs">
+    For each sign, press “C” to view imagery and complete subattributes.  
+    <img src="/images/image65.png" alt="Review sign imagery" />
+  </StepperItem>
+  <StepperItem title="Step 9: Approve or Delete">
+    Approve (green) or delete (red) each sign based on accuracy.  
+    <img src="/images/image66.png" alt="Approve or delete sign" />
+  </StepperItem>
+  <StepperItem title="Step 10: Proceed to Next">
+    Click back on the first approved assembly, then use crosshair or “+” to move to the next.  
+    <img src="/images/image67.png" alt="Navigate to next assembly" />
+  </StepperItem>
+</Stepper>
+
+<Tabs defaultValue="tips">
+  <TabsList>
+    <TabsTrigger value="tips">Tips</TabsTrigger>
+    <TabsTrigger value="common-issues">Common Issues</TabsTrigger>
+  </TabsList>
+  <TabsContent value="tips">
+    <Note type="tip">
+      Locking the camera (L) and using the crosshair icon speeds up navigation between assemblies.
+    </Note>
+  </TabsContent>
+  <TabsContent value="common-issues">
+    {/* List common sign assembly issues and resolutions here */}
+  </TabsContent>
+</Tabs>

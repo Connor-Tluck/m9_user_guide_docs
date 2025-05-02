@@ -1,0 +1,140 @@
+---
+title: Mach9 Sandbox
+---
+
+# Mach9 Sandbox
+
+## About Mach9
+Mach9 is an American software technology company founded in 2021, dedicated to developing automated geospatial production solutions. The company was established by leading AI researchers and engineers from Carnegie Mellon University and the autonomous driving industry to revolutionize mapping workflows.
+
+Mach9's flagship product, **Digital Surveyor**, significantly accelerates the process of creating CAD and GIS deliverables from mobile mapping data. By leveraging AI-powered automated 3D feature extraction and streamlined quality control workflows, Digital Surveyor enables users to generate accurate geospatial data up to 30 times faster than traditional methods. Mach9 supports government agencies and civil engineering firms worldwide in building and maintaining the next generation of infrastructure.
+
+## Sandbox Objectives
+The Mach9 Sandbox is a temporary trial environment for experiencing the platform. The goals of the sandbox are to:
+
+- Give access to extracted features from the Mach9 data processing pipeline
+- View and understand these feature extractions
+- Interact with the QA/QC functionality of Digital Surveyor
+- Conduct drafting of new features with the platform
+- View and understand final deliverables in the form of CAD and GIS exported content
+
+## About the Sandbox
+**Location:**  
+Lat/Long: (39.916159610884115, -105.09522088890911)  
+Town: Broomfield, CO
+
+## Sandbox Contents
+
+### Cloud (Digital Surveyor)
+- **Project File**: Contains project settings and configurations.
+- **Extractions - Annotation Layer Non QA**: Automated 3D object and linear features.
+- **Extractions - Annotation Layer Post QA**: Subset of the original extraction dataset, reviewed and approved by two QA/QC staff.
+
+- **User Guide**: Digital Surveyor User Guide - March 2025 Update
+
+### Google Drive
+**Folder Structure:**
+
+```
+Sandbox/
+├── Reports/
+│   ├── Mach9_Sandbox_Pre_QA.pdf
+│   ├── Mach9_Sandbox_Post_QA.pdf
+│
+├── Geospatial Files/
+│   └── 3_31_Post_QA_Geospatial_Files_Projected_2231/
+│       ├── Shape_Files/
+│       └── 2231_Projected_Post_QA.gdb/
+│
+├── CAD Files and Drawings/
+│   └── CAD/
+│       └── Bentley/
+│           ├── Sheets/
+│           ├── Rasters/
+│           ├── CAD/
+│           └── All_Plans_Revised_Print.pset
+│
+├── Mach9_Urban_Sandbox_Getting_Started_Guide.docx
+├── Mach9_Sandbox_All_Plans_2025_03_28_.pdf
+├── Mach9 Sandbox One Pager 2025.pdf
+└── Mach9 Sandbox One Pager 2025 (Google Doc)
+```
+
+## General
+- **Sandbox One Pager**: Quick one-page guide on the Sandbox and what is included.
+- **Urban Sandbox All Plans**: Full CAD deliverable for plan sheets (sheets 1-8) showing formatted linestyles, cells, etc. Includes Pre QA and Post QA examples.
+
+### Reports
+- **README**: Overview of data and getting started guide (this guide).
+- **Extraction Report Count (Pre-QC)**: Automated 3D object and vector features.
+- **Extraction Report Count (Post-QC)**: Automated 3D object and vector features following a QA process and additional manual features added.
+
+### Geospatial Files
+- **Geodatabase**: Esri geodatabase containing all feature data, post QA and projected to EPSG 2231.
+- **Shape Files**: GIS-compatible shapefiles for extracted features, post QA and projected to EPSG 2231.
+- **CAD Files**: Standard CAD exports of extracted data. Content has been formatted for standard survey formats and linestyles. Most files projected to EPSG 2231.
+
+## Mach9 Extractions
+Mach9 Digital Surveyor automates the extraction of 3D objects and linear features from mobile LiDAR and imagery datasets. Included in this sandbox are the following:
+
+### Automated 3D Object Feature Extraction
+- Bollard (X, Y, Z)
+- Electric Utility Pole (X, Y, Z, diameter, height, inclination)
+- Utility Cabinet (X, Y, Z)
+- Utility Pedestal (X, Y, Z)
+- Pole-Mounted Transformer (X, Y, Z)
+- Sign Face (X, Y, Z, width, height, orientation)
+- Sign Post (X, Y, Z, diameter, height, inclination)
+- Street and Traffic Light Pole (X, Y, Z, diameter, height, inclination)
+- Street Light Luminaire (X, Y, Z)
+- Traffic Signal (X, Y, Z)
+- Pedestrian Crossing Light (X, Y, Z)
+- Manhole Cover (X, Y, Z)
+- Fire Hydrant (X, Y, Z)
+
+### Automated 3D Linear Feature Extraction
+- Pavement Striping (X, Y, Z) - Linear
+- Curbs (Top, Bottom, Back and Front) (X, Y, Z) - Linear
+- Pavement Edges (X, Y, Z) - Linear
+
+### Manual Feature Extraction
+For any features not currently supported by automated extraction, users can place manual annotations within Digital Surveyor.
+
+**Post QA/QC Dataset will include Curb ramps and barrier layers added manually by the QA team:**
+- Curb Ramp (X, Y, Z) - Linear
+- Sidewalk (X, Y, Z) - Linear
+- Guiderail (X, Y, Z) - Linear
+- Misc Pavement Markings (X, Y, Z) - Linear
+
+## QA/QC Process
+**Background:**
+Mach9's Digital Surveyor is not just a viewer tool but a full QA/QC tool for reviewing existing extractions as well as drafting additional linear features and objects. In an effort to simulate a real world deliverable and highlight this functionality, we had a team of two QA/QC users review sheets 1-8. This process included:
+
+- Full review of all Objects
+- Full review of all Linear Features
+- Additional layer drafting for sidewalks, edge of pavement, etc.
+
+This process took about 3 days to complete. See below for the extents of the QA Area:
+
+(QAQC Subset Area)
+
+## How to Use
+### Viewing the Data
+- Open the Project File in Mach9 Digital Surveyor or compatible CAD/GIS software.
+- Use the included QA Annotation Layer for reviewing extractions.
+
+### Exporting Features
+Extracted features can be exported into standard formats including dxf, gdb, and shape files. The Sandbox environment has shape files and gdb files already projected and ready to be loaded into either GIS or CAD. Located in the folder: `3_31_Post_QA_Geospatial_Files_Projected_2231`.
+
+For technical support and additional training materials, contact [support@mach9.ai](mailto:support@mach9.ai).
+
+## Terms of Use
+The Mach9 Urban Sandbox is provided to customers for evaluation and exploration purposes. Users agree to the following terms:
+
+- The sandbox environment is for non-commercial evaluation only.
+- Users may not redistribute extracted data or software components.
+- Any feedback or findings may be shared with Mach9 to improve the system.
+- Mach9 reserves the right to modify or terminate sandbox access at any time.
+- The sandbox environment is strictly confidential and should not be shared with other people or organizations.
+
+For full terms and conditions, please contact [support@mach9.ai](mailto:support@mach9.ai). 

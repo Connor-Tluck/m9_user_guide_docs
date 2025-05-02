@@ -1,0 +1,49 @@
+---
+title: Sign Assembly Troubleshooting
+description: Troubleshooting guide for sign assembly issues in Digital Surveyor
+---
+
+import {
+  Note,
+  Stepper,
+  StepperItem,
+  Tabs,
+  TabsList,
+  TabsTrigger,
+  TabsContent
+} from '@/components/ui';
+
+# Sign Assembly Troubleshooting
+
+<Note type="warning">
+  Use this guide to resolve common issues encountered during sign assembly extraction and QA/QC.
+</Note>
+
+<Stepper>
+  <StepperItem title="Color Mismatch">
+    If a sign assembly and the signs above don't match in color, select the sign and click the blue icon at the bottom right, then choose the corresponding assembly. The sign will turn yellow.  
+    <img src="/images/image68.png" alt="Link sign to assembly" />
+  </StepperItem>
+  <StepperItem title="Add Missing Assembly">
+    If a sign has no assembly, select the sign face and click the green “+” icon to create a new assembly. The sign will turn green.  
+    <img src="/images/image69.png" alt="Add new sign assembly" />  
+    <img src="/images/image70.png" alt="Sign assembly created" />
+  </StepperItem>
+  <StepperItem title="Break Links">
+    To unlink a sign from an assembly, select the sign face and click the red “Trash Can” icon. The sign will turn red.  
+    <img src="/images/image71.png" alt="Unlink sign assembly" />
+  </StepperItem>
+</Stepper>
+
+<Tabs defaultValue="common-problems">
+  <TabsList>
+    <TabsTrigger value="common-problems">Common Problems</TabsTrigger>
+    <TabsTrigger value="solutions">Solutions</TabsTrigger>
+  </TabsList>
+  <TabsContent value="common-problems">
+    {/* List common troubleshooting problems here */}
+  </TabsContent>
+  <TabsContent value="solutions">
+    {/* Provide troubleshooting solutions here */}
+  </TabsContent>
+</Tabs>

@@ -1,0 +1,129 @@
+---
+title: Attribute Templates
+description: Learn how to create and configure attribute templates for feature extraction
+---
+
+import {
+  Note,
+  Stepper,
+  StepperItem,
+  Tabs,
+  TabsList,
+  TabsTrigger,
+  TabsContent
+} from '@/components/ui';
+
+Attribute templates define what features Digital Surveyor will extract from your dataset. In this section we'll cover how to build one from scratch—if you already have a template, skip ahead to **Running Perception**.
+
+---
+
+## Creating New Layers
+
+First, open the template menu and navigate to the creation page, then add layers one by one:
+
+<Stepper>
+  <StepperItem title="Step 1: Access Template Menu">
+    In **Folders & Files**, click **Upload data** → **Template**.  
+    <img src="/images/image66.png" alt="Access Template Menu" />
+  </StepperItem>
+
+  <StepperItem title="Step 2: Open Creation Page">
+    You'll land on the template creation screen. Here you can either click **Add New Layer** or upload an existing GDB.  
+    <img src="/images/image54.png" alt="Template Creation Screen" />
+  </StepperItem>
+
+  <StepperItem title="Step 3: Add New Layer">
+    Click **Add New Layer** (blue button). A textbox appears—this is where you name your feature.  
+    <img src="/images/image43.png" alt="Add New Layer Button" />
+  </StepperItem>
+
+  <StepperItem title="Step 4: Name Your Feature">
+    Enter the feature name in the box, then click **+ Add** to proceed.  
+    <img src="/images/image60.png" alt="Name Feature Textbox and + Add" />
+  </StepperItem>
+
+  <StepperItem title="Step 5: Choose Feature Type">
+    In the dropdown outlined in green, select **Feature Type**.  
+    <img src="/images/image51.png" alt="Feature Type Dropdown" />
+  </StepperItem>
+
+  <StepperItem title="Step 6: Select Specific Feature">
+    In the adjacent dropdown, choose the specific object or linear feature from Mach9's supported list.  
+    <img src="/images/image58.png" alt="Supported Features List" />
+  </StepperItem>
+
+  <StepperItem title="Step 7: Finalize Layer">
+    If no subattributes or rules are needed, click **Add Layer** (blue bar) to finish.  
+    <img src="/images/image42.png" alt="Add Layer Confirmation" />
+  </StepperItem>
+</Stepper>
+
+---
+
+## Template Configuration
+
+If you need subattributes, validation, or custom rules, use the tabs below:
+
+<Tabs defaultValue="types">
+  <TabsList>
+    <TabsTrigger value="types">Feature Types</TabsTrigger>
+    <TabsTrigger value="attributes">Attributes</TabsTrigger>
+    <TabsTrigger value="validation">Validation</TabsTrigger>
+  </TabsList>
+
+  <TabsContent value="types">
+    <Note>
+      - **Points**: Discrete features (e.g., signs, poles)  
+      - **Lines**: Linear features (e.g., road markings)  
+      - **Polygons**: Area features (e.g., buildings)
+    </Note>
+  </TabsContent>
+
+  <TabsContent value="attributes">
+    <Note>
+      - Define attribute name and description  
+      - Choose data type (text, number, date, etc.)  
+      - Mark required vs optional  
+      - Set default values  
+    </Note>
+  </TabsContent>
+
+  <TabsContent value="validation">
+    <Note>
+      - Specify value ranges  
+      - Enforce format requirements  
+      - Flag required fields  
+      - Add custom validation logic  
+    </Note>
+  </TabsContent>
+</Tabs>
+
+---
+
+## Best Practices
+
+<Note type="tip">
+  - Use clear, descriptive layer names  
+  - Group related attributes logically  
+  - Apply validation to catch errors early  
+  - Include helpful descriptions for each attribute  
+  - Test templates on a sample dataset  
+</Note>
+
+---
+
+## Template Management
+
+After creation, manage your templates easily:
+
+<Stepper>
+  <StepperItem title="Edit Templates">
+    Modify layers, feature types, or attribute rules on any existing template.
+  </StepperItem>
+  <StepperItem title="Duplicate Templates">
+    Clone a template to make a similar one—saves setup time.
+  </StepperItem>
+  <StepperItem title="Delete Templates">
+    Remove templates you no longer need. (Note: deletions are permanent.)
+  </StepperItem>
+</Stepper>

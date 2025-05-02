@@ -1,0 +1,46 @@
+---
+title: Creating Specialized Layers
+description: How to create specialized feature layers in Digital Surveyor
+---
+
+import {
+  Note,
+  Stepper,
+  StepperItem,
+  Tabs,
+  TabsList,
+  TabsTrigger,
+  TabsContent
+} from '@/components/ui';
+
+# Creating Specialized Layers
+
+<Note>
+  Specialized layers allow you to organize and extract unique types of features tailored to your project needs. For example, you can create layers for linear features (like roadway centerlines) or sign features.
+</Note>
+
+<Stepper>
+  <StepperItem title="Create Linear Feature Layer">
+    For some linear features like roadway centerlines, you may want to indicate the paint color and paint pattern. Below is an example of a layer created for the solid white centerline feature.
+    <img src="/images/image67.png" alt="Linear feature layer example" />
+  </StepperItem>
+  <StepperItem title="Create Sign Feature Layer">
+    For signs, create a feature type with the sign face. Below is a sample of the sign feature with subattributes including MUTCD codes, condition of the signs, and the associated sign assembly ID.
+    <img src="/images/image23.png" alt="Sign feature layer example" />
+  </StepperItem>
+</Stepper>
+
+<Tabs defaultValue="tips">
+  <TabsList>
+    <TabsTrigger value="tips">Tips</TabsTrigger>
+    <TabsTrigger value="examples">Examples</TabsTrigger>
+  </TabsList>
+  <TabsContent value="tips">
+    <Note type="tip">
+      Use specialized layers to separate different feature types for easier management and QA/QC.
+    </Note>
+  </TabsContent>
+  <TabsContent value="examples">
+    {/* Example configurations coming soon */}
+  </TabsContent>
+</Tabs>

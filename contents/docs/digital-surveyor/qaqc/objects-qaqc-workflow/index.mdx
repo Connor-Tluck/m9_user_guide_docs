@@ -1,0 +1,105 @@
+---
+title: Objects QA/QC Workflow
+description: Step-by-step guide for QA/QC of object features in Digital Surveyor
+---
+
+import {
+  Note,
+  Stepper,
+  StepperItem,
+  Tabs,
+  TabsList,
+  TabsTrigger,
+  TabsContent
+} from '@/components/ui';
+
+# Objects QA/QC Workflow
+
+<Note>
+  The following QA/QC workflow lets you adjust, verify, and delete object features extracted in Digital Surveyor.
+</Note>
+
+<Stepper>
+  <StepperItem title="Step 1: Open Filters">
+    Once the dataset loads, click the filter icon at the bottom left to filter by objects, lines, QA state, template layers, perception runs, and sources.  
+    <img src="/images/image48.png" alt="Filter icon" />
+  </StepperItem>
+
+  <StepperItem title="Step 2: Select Features">
+    Hover over the object's filter and choose which extracted features to view.  
+    <img src="/images/image34.png" alt="Select feature filter" />
+  </StepperItem>
+
+  <StepperItem title="Tip: Refine with Sort/Search">
+    Use “Sort by” or toggle ascending/descending to narrow your search.  
+    <img src="/images/image3.png" alt="Sort tools" />  
+    <img src="/images/image62.png" alt="Ascending/descending toggle" />
+  </StepperItem>
+
+  <StepperItem title="Step 3: Fly to Feature">
+    In the **Features** table, click the crosshair icon or click the feature name and press “F” to fly to it.  
+    <img src="/images/image13.png" alt="Fly to object" />
+  </StepperItem>
+
+  <StepperItem title="Step 4: Inspect & Edit">
+    Review the feature’s info panel on the right. Select and drag to move the object. Then use the tools below to adjust before approval or deletion.  
+    <img src="/images/image52.png" alt="Feature info panel" />
+  </StepperItem>
+
+  <StepperItem title="Tip: Lock Camera">
+    Click the lock icon or press “L” to orbit around the feature.  
+    <img src="/images/image55.png" alt="Lock camera" />
+  </StepperItem>
+
+  <StepperItem title="Tip: View Imagery">
+    Click the **See image** icon or press “C” to access the extraction imagery.  
+    <img src="/images/image22.png" alt="See image icon" />
+  </StepperItem>
+
+  <StepperItem title="Tip: Adjust Dimensions">
+    Drag the dimension nodes to resize the object.  
+    <img src="/images/image6.png" alt="Dimension nodes" />
+  </StepperItem>
+
+  <StepperItem title="Tip: Rotate Feature">
+    Use the rotation wheel to change orientation; hold “Ctrl” to fix the pivot.  
+    <img src="/images/image12.png" alt="Rotation wheel" />
+  </StepperItem>
+
+  <StepperItem title="Tip: More Actions">
+    Right-click the feature for actions like rotate 180°, split horizontally/vertically, and more—see the full guide at  
+    <a href="https://docs.mach9.io/docs/Editing-Features/">Editing Features</a>.  
+    <img src="/images/image32.png" alt="Right-click actions" />
+  </StepperItem>
+
+  <StepperItem title="Tip: Cross Section View">
+    Use the cross-section tool to verify subattributes from another perspective.  
+    <img src="/images/image29.png" alt="Cross section tool" />
+  </StepperItem>
+
+  <StepperItem title="Step 5: Approve or Delete">
+    Click the green **Approve** or red **Delete** button—or press “E”/“R”—to update the QA state.  
+    <img src="/images/image37.png" alt="Approve or delete feature" />
+  </StepperItem>
+
+  <StepperItem title="Step 6: Next Feature">
+    Click the next crosshair icon or press “+”/“–” to navigate through extracted features.
+  </StepperItem>
+</Stepper>
+
+<Tabs defaultValue="tips">
+  <TabsList>
+    <TabsTrigger value="tips">Tips</TabsTrigger>
+    <TabsTrigger value="common-issues">Common Issues</TabsTrigger>
+  </TabsList>
+  <TabsContent value="tips">
+    <Note type="tip">
+      • Use keyboard shortcuts (F, L, C, E, R) to speed up QA/QC.<br/>
+      • Document manual edits for audit trails.<br/>
+      • Always verify subattributes via cross-section for accuracy.
+    </Note>
+  </TabsContent>
+  <TabsContent value="common-issues">
+    {/* Common issues like missing attributes, misaligned objects, or cross-section mismatches */}
+  </TabsContent>
+</Tabs>

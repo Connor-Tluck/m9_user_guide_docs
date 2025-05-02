@@ -1,0 +1,155 @@
+---
+title: QA/QC Workflows
+description: Comprehensive guide for quality assurance and quality control workflows in Digital Surveyor
+---
+
+# QA/QC Workflows
+
+This guide covers the three main QA/QC workflows in Digital Surveyor:
+- Objects QA/QC
+- Linear Features QA/QC
+- Sign Assembly QA/QC
+
+## Objects QA/QC Workflow
+
+### Initial Setup
+
+<Stepper>
+  <StepperItem title="Filter Features">
+    Use the filter icon in the bottom left to filter by:
+    - Objects or lines
+    - QA state
+    - Template layers
+    - Perception runs
+    - Sources
+    <img src="/images/image48.png" alt="Filter Options" />
+  </StepperItem>
+  <StepperItem title="Select Features">
+    Select specific features to review from the objects filter
+    <img src="/images/image34.png" alt="Feature Selection" />
+  </StepperItem>
+</Stepper>
+
+### Navigation and Review
+
+<Tabs>
+  <TabsList>
+    <TabsTrigger value="navigation">Navigation</TabsTrigger>
+    <TabsTrigger value="review">Review</TabsTrigger>
+    <TabsTrigger value="correction">Correction</TabsTrigger>
+  </TabsList>
+  <TabsContent value="navigation">
+    <Note>
+      Navigation tools:
+      - Sort by various attributes
+      - Filter by QA state
+      - Group by feature type
+      - Search for specific features
+    </Note>
+  </TabsContent>
+  <TabsContent value="review">
+    <Note>
+      Review process:
+      - Check feature accuracy
+      - Verify attributes
+      - Validate geometry
+      - Document issues
+    </Note>
+  </TabsContent>
+  <TabsContent value="correction">
+    <Note>
+      Correction options:
+      - Edit feature geometry
+      - Update attributes
+      - Split/merge features
+      - Delete incorrect features
+    </Note>
+  </TabsContent>
+</Tabs>
+
+## Linear Features QA/QC
+
+<Note type="info">
+  The linear features workflow follows a similar process but focuses on:
+  - Line segments
+  - Connectivity
+  - Attribute consistency
+  - Geometric accuracy
+</Note>
+
+<Stepper>
+  <StepperItem title="Line Review">
+    - Check line continuity
+    - Verify segment connections
+    - Validate attributes
+    - Document issues
+  </StepperItem>
+  <StepperItem title="Corrections">
+    - Adjust line geometry
+    - Fix connectivity issues
+    - Update attributes
+    - Split/merge lines
+  </StepperItem>
+  <StepperItem title="Validation">
+    - Verify corrections
+    - Check consistency
+    - Document changes
+    - Update QA state
+  </StepperItem>
+</Stepper>
+
+## Sign Assembly QA/QC
+
+<Note type="warning">
+  For sign assemblies, pay special attention to:
+  - Component relationships
+  - Assembly structure
+  - Attribute completeness
+  - Position accuracy
+</Note>
+
+<Tabs>
+  <TabsList>
+    <TabsTrigger value="components">Components</TabsTrigger>
+    <TabsTrigger value="assembly">Assembly</TabsTrigger>
+    <TabsTrigger value="attributes">Attributes</TabsTrigger>
+  </TabsList>
+  <TabsContent value="components">
+    <Note>
+      Component verification:
+      - Check all parts present
+      - Verify relationships
+      - Validate geometry
+      - Document missing parts
+    </Note>
+  </TabsContent>
+  <TabsContent value="assembly">
+    <Note>
+      Assembly validation:
+      - Verify structure
+      - Check connections
+      - Validate orientation
+      - Document issues
+    </Note>
+  </TabsContent>
+  <TabsContent value="attributes">
+    <Note>
+      Attribute review:
+      - Check completeness
+      - Verify values
+      - Validate relationships
+      - Document corrections
+    </Note>
+  </TabsContent>
+</Tabs>
+
+## Best Practices
+
+<Note type="tip">
+  Follow these best practices for QA/QC:
+  - Use consistent review process
+  - Document all changes
+  - Verify corrections
+  - Maintain QA state
+  - Regular progress updates
+</Note> 
